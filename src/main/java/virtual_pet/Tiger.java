@@ -35,6 +35,7 @@ public class Tiger extends VirtualPet {
         return hungerLevel;
     }
 
+    @Override
     public void tick() {
         hungerLevel+= 10;
         thirstLevel+= 10;
@@ -67,6 +68,31 @@ public class Tiger extends VirtualPet {
     @Override
     public void play() {
         moodLevel-=5;
+    }
+
+    @Override
+    public void surrenderPet() {
+
+    }
+
+    @Override
+    public void adoptPet() {
+
+    }
+
+    @Override
+    public void playPet() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Tiger{" +
+                "breed='" + breed + '\'' +
+                ", moodLevel=" + moodLevel +
+                ", thirstLevel=" + thirstLevel +
+                ", hungerLevel=" + hungerLevel +
+                '}';
     }
 }
 

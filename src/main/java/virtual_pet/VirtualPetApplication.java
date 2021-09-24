@@ -16,110 +16,54 @@ public class VirtualPetApplication {
         String userChoice = "";
         VirtualPetShelter myShelter = new VirtualPetShelter();
         do{
+            System.out.println("Hello and welcome to the Petting zoo! \n");
+            System.out.println("Here is the status of all the pets.");
+            System.out.println(myShelter.getPets());
             shelterStatus(myShelter);
+            System.out.println("What would you like to do next?.");
+            System.out.println("1. Feed the pets."); // This applies to all pets, feed all the pets at once.
+            System.out.println("2. Give all the pets a drink of water."); // This applies to all pets, water them all at once
+            System.out.println("3. Play with a pet."); // Play with a specific Tiger, list them with descriptions, then select
+            System.out.println("4. surrender a pet."); // Add a tiger to the shelter.
+            System.out.println("5. Quit"); // kick out of loop
+            userChoice = tigerScan.nextLine();
 
+            switch (userChoice) {
+                case "1":
+                    myShelter.feedAll();
+                    System.out.println("All pets have been fed!");
+                    break;
+                case "2":
+                    myShelter.waterAll();
+                    break;
+                case "3":
+                    myShelter.getPetByName("Clancy").playPet();
+                    break;
+                case "4":
+                    System.out.println("What is the pets name?");
+                    String name = tigerScan.nextLine();
+                    System.out.println("What is the pets description?");
+                    String description = tigerScan.nextLine();
+                    System.out.println("What is the pets breed?");
+                    String breed = tigerScan.nextLine();
+                    Tiger myTiger = new Tiger(name,description, breed,50,50,50);
+                    myShelter.surrenderPet(myTiger);
+                    break;
+                case "5":
+                    myShelter.adoptPet(myShelter.getPetByName("Clancy")); // repeat
+                    break;
+                case "6":
+                    myShelter.playAll();
+                    break;
+                default:
+                    System.out.println("Please enter a valid response.");
 
-        }
-        while (userChoice != "6");
-
-
-
-        System.out.println("Hello and welcome to the petting zoo! \n" +
-                        "Here is the status of all of the animals in the petting zoo.\n");
-
-        for (Tiger tiger: ) {
-            System.out.println(tiger.getName());
-            System.out.println(tiger.getDescription());
-            System.out.println(tiger.getHungerLevel());
-            System.out.println(tiger.getMoodLevel());
-            System.out.println(tiger.getThirstLevel());
-        }
-
-        System.out.println("What would you like to do next? \n"
-        + "1. Feed the pets.\n" // This applies to all pets, feed all the pets at once.
-        + "2. Give the pets a drink.\n" // This applies to all pets, water them all at once
-        + "3. Play with a pet. \n" // Play with a specific Tiger, list them with descriptions, then select
-        + "4. Surrender your Tiger.\n" // Add a tiger to the shelter. .add() from array list
-        + "5. Adopt a tiger. \n" // Remove a specific tiger from the shelter.  .remove() from array list. For loop through pets and remove specific pet.
-         + "6. Quit"); // kick out
-
-  // list out options every time you go through the loop
-        int response = int.nextInt();
-        // tigerScan.nextLine();
-
-        switch (response) {
-            case 1:
-                feed();
-                break;
-            case 2:
-                myShelter.waterAll();
-            case 3:
-                playPet();
-            case 4:
-                surrenderPet();
-            case 5:
-                adoptPet();
-            case 6:
-
-        }
-
-
-
-
-
-
-
-
-// old code
-
-        /* System.out.println("Hello rawr! I am " + clancy.getName() + ", I am " + clancy.getAge() + " years old!"
-                + " I am a " + clancy.getBreed() + " tiger.");
-        System.out.println("Would you like to 1. feed me, 2. give me a drink, 3. or play with me?");
-        System.out.println("Chose one, two, or three");
-        */
-
-
-            /*
-        Scanner tigerScan = new Scanner(System.in);
-        String answer;
-        tigerScan.nextLine();
-
-        while (true) {
-            answer = tigerScan.nextLine().toLowerCase();
-            clancy.tick();
-
-            while (answer.equals("one") && (clancy.getHungerLevel()) <25) {
-                clancy.feedTiger();
-                if (clancy.hungerLevel >=25) {
-                    System.out.println("Thank you for feeding me");
-                    if (clancy.hungerLevel <=25) {
-                        System.out.println("I'm still hungry.");
-                    }
-                }
-
-                while (answer.equals("two") && (clancy.getThirstLevel()) <25) {
-                    clancy.drinkTiger();
-                    if (clancy.thirstLevel >=25) {
-                        System.out.println("Thank you for giving me water.");
-                        if(clancy.thirstLevel <=25) {
-                            System.out.println("I'm still thirsty");
-                        }
-                    }
-                }
-
-                while (answer.equals("three") && ((clancy.getMoodLevel()) <25)) {
-                    clancy.playTiger();
-                    if (clancy.moodLevel >=25) {
-                        System.out.println("Thank you for playing with me");
-                        if (clancy.moodLevel <=25) {
-                            System.out.println("I still want to play.");
-                        }
-                    }
-                }
             }
+
+            myShelter.tick();
         }
-    }
-    */
+
+        while (userChoice != "7");
 
     }
 

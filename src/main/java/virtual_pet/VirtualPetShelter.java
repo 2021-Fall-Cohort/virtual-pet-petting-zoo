@@ -57,4 +57,12 @@ public class VirtualPetShelter {
             currentPet.play();
         }
     }
+
+    public void tick() {
+        for (VirtualPet currenPet : shelterPets) {
+            currenPet.tick();
+        }
+
+    }
+
 }
