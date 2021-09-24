@@ -1,26 +1,24 @@
 package virtual_pet;
 
-public class Tiger {
+public class Tiger extends VirtualPet {
 
-    public int hungerLevel;
-    private String name;
-    private int age;
+    // talk to shelter noice
+
+
     private String breed;
     public int moodLevel;
     public int thirstLevel;
+    public int hungerLevel;
 
-    public Tiger(String name, int age, String breed, int hungerLevel, int moodLevel, int thirstLevel) {
-        this.name = name;
-        this.age = age;
+    public Tiger(String name, String description, String breed,int hungerLevel, int thirstLevel, int moodLevel) {
+        super(name, description);
         this.breed = breed;
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.moodLevel = moodLevel;
+
     }
 
-    public String getName() {
-        return name;
-    }
      public int getThirstLevel() {
         return thirstLevel;
      }
@@ -28,10 +26,6 @@ public class Tiger {
      public int getMoodLevel() {
         return moodLevel;
      }
-
-    public int getAge() {
-        return age;
-    }
 
     public String getBreed() {
         return breed;
@@ -42,9 +36,9 @@ public class Tiger {
     }
 
     public void tick() {
-        hungerLevel++;
-        thirstLevel++;
-        moodLevel++;
+        hungerLevel+= 10;
+        thirstLevel+= 10;
+        moodLevel+= 10;
 
     }
 
@@ -56,10 +50,24 @@ public class Tiger {
         moodLevel-=5;
     }
 
-    public void feedTiger() {
+  /*  public void feedTiger() {
+        hungerLevel-=5;
+    } */
+
+    @Override
+    public void feed() {
         hungerLevel-=5;
     }
 
+    @Override
+    public void water() {
+        thirstLevel-=5;
+    }
+
+    @Override
+    public void play() {
+        moodLevel-=5;
+    }
 }
 
 
