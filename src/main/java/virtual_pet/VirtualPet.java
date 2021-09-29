@@ -25,10 +25,6 @@ public abstract class VirtualPet {
 
     public abstract void play();
 
-    public abstract void surrenderPet();
-
-    public abstract void adoptPet();
-
     public abstract void playPet();
 
     public abstract void tick();
