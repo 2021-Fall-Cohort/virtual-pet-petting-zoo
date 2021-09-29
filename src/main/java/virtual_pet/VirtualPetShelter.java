@@ -1,5 +1,4 @@
 package virtual_pet;
-import java.sql.Array;
 import java.util.ArrayList;
 
 // holding the collections of Tigreesssssss
@@ -27,7 +26,15 @@ public class VirtualPetShelter {
                 return currentPet;
             }
         }
+        return null;
+    }
 
+    public VirtualPet getPetByDescription(String description) {
+        for (VirtualPet currentPet: shelterPets) {
+            if (currentPet.getDescription().equalsIgnoreCase(description)) {
+                return currentPet;
+            }
+        }
         return null;
     }
 
@@ -43,7 +50,6 @@ public class VirtualPetShelter {
         for (VirtualPet currentPet : shelterPets) {
            currentPet.feed();
         }
-
     }
 
     public void waterAll() {
@@ -59,8 +65,8 @@ public class VirtualPetShelter {
     }
 
     public void tick() {
-        for (VirtualPet currenPet : shelterPets) {
-            currenPet.tick();
+        for (VirtualPet currentPet : shelterPets) {
+            currentPet.tick();
         }
 
     }

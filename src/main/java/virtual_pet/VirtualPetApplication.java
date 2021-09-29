@@ -1,9 +1,6 @@
 package virtual_pet;
-import java.util.ArrayList;
 import java.util.Scanner;
-
 public class VirtualPetApplication {
-
 
     // interacting and gameplay should go HERE in the main
     Scanner tigerScan = new Scanner(System.in);
@@ -12,6 +9,7 @@ public class VirtualPetApplication {
         VirtualPetApplication myApp = new VirtualPetApplication();
         myApp.gameLoop();
     }
+
     public void gameLoop() {
         String userChoice = "";
         VirtualPetShelter myShelter = new VirtualPetShelter();
@@ -25,7 +23,9 @@ public class VirtualPetApplication {
             System.out.println("2. Give all the pets a drink of water."); // This applies to all pets, water them all at once
             System.out.println("3. Play with a pet."); // Play with a specific Tiger, list them with descriptions, then select
             System.out.println("4. surrender a pet."); // Add a tiger to the shelter.
-            System.out.println("5. Quit"); // kick out of loop
+            System.out.println("5. Adopt a pet.");
+            System.out.println("6. Play with all the pets"); // kick out of loop
+            System.out.println("7. Quit");
             userChoice = tigerScan.nextLine();
 
             switch (userChoice) {
@@ -37,6 +37,7 @@ public class VirtualPetApplication {
                     myShelter.waterAll();
                     break;
                 case "3":
+                    System.out.println("What tiger would you like with?");
                     myShelter.getPetByName("Clancy").playPet();
                     break;
                 case "4":
@@ -73,11 +74,6 @@ public class VirtualPetApplication {
         }
     }
 }
-
-
-
-
-
 
 // scanners can use the close() scanner, but usually you use the scanner to scan files
 
