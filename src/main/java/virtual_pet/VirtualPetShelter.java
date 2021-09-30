@@ -10,10 +10,10 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         this.shelterPets = new ArrayList<VirtualPet>();
-        shelterPets.add(new Tiger("Clancy", "Kind of lame but he is still cool", "Siberian", 23, 23, 23));
-        shelterPets.add(new Tiger("Phillip", "Phillip fucking rules.", "Bengali", 75, 75, 85));
-        shelterPets.add(new Tiger("Jeb", "Doesn't know how to read", "Panthera", 67, 57, 95));
-        shelterPets.add(new Tiger("Tony", "Makes cereal", "Corporate tiger", 100, 98, 23));
+        shelterPets.add(new OrganicPet("Clancy", "Kind of lame but he is still cool", 23, 23, 23));
+        shelterPets.add(new OrganicPet("Phillip", "Phillip fucking rules.", 75, 75, 85));
+        shelterPets.add(new OrganicPet("Jeb", "Doesn't know how to read", 67, 67, 95));
+        shelterPets.add(new OrganicPet("Tony", "Makes cereal", 100, 100, 98));
     }
 
     public ArrayList<VirtualPet> getPets() {
@@ -48,19 +48,24 @@ public class VirtualPetShelter {
 
     public void feedAll() {
         for (VirtualPet currentPet : shelterPets) {
-           currentPet.feed();
+           currentPet.energize();
         }
     }
 
     public void waterAll() {
         for (VirtualPet currentPet : shelterPets) {
-            currentPet.water();
+            if(currentPet instanceof OrganicPet){
+                ((OrganicPet)currentPet).fluid();
+            }
+            if(currentPet instanceof RoboticPet){
+                ((RoboticPet)currentPet).fluid();
+            }
         }
     }
 
     public void playAll() {
         for (VirtualPet currentPet : shelterPets) {
-            currentPet.play();
+//            currentPet.play();
         }
     }
 

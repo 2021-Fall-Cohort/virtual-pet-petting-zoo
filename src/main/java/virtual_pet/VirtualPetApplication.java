@@ -47,7 +47,7 @@ public class VirtualPetApplication {
                     String description = tigerScan.nextLine();
                     System.out.println("What is the pets breed?");
                     String breed = tigerScan.nextLine();
-                    Tiger myTiger = new Tiger(name,description, breed,50,50,50);
+                    OrganicPet myTiger = new OrganicPet(name,description,50,50,50);
                     myShelter.surrenderPet(myTiger);
                     break;
                 case "5":
