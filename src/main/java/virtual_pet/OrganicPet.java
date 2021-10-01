@@ -47,14 +47,9 @@ public class OrganicPet extends VirtualPet {
         thirstLevel-=5;
     }
 
-
-    public void play() {
-        moodLevel-=5;
-    }
-
     @Override
     public void playPet() {
-
+        moodLevel -=5;
     }
 
     @Override

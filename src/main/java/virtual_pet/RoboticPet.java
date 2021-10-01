@@ -1,14 +1,26 @@
 package virtual_pet;
 
-public abstract class RoboticPet extends VirtualPet {
+public class RoboticPet extends VirtualPet {
 
     public int powerLevel;
     public int oilLevel;
-    public int hungerLevel;
+    private int disrepairLevel;
 
-    public RoboticPet(String name, String description,int hungerLevel, int oilLevel, int powerLevel) {
+    public int getPowerLevel() {
+        return powerLevel;
+    }
+
+    public int getOilLevel() {
+        return oilLevel;
+    }
+
+    public int getDisrepairLevel() {
+        return disrepairLevel;
+    }
+
+    public RoboticPet(String name, String description, int disrepairLevel, int oilLevel, int powerLevel) {
         super(name, description);
-        this.hungerLevel = hungerLevel;
+        this.disrepairLevel = disrepairLevel;
         this.oilLevel = oilLevel;
         this.powerLevel = powerLevel;
 
@@ -25,7 +37,7 @@ public abstract class RoboticPet extends VirtualPet {
    }
 
     public void playPet() {
-
+        powerLevel -=10;
     }
     @Override
     public void tick(){
