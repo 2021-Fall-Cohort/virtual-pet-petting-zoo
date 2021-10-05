@@ -1,6 +1,6 @@
 package virtual_pet;
 
-public class OrganicPet extends VirtualPet {
+public abstract class OrganicPet extends VirtualPet {
 
     // talk to shelter noice
 

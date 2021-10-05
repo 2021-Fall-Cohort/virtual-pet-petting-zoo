@@ -33,5 +33,7 @@ public abstract class VirtualPet {
     public String getPetString() {
         return String.format("pet: %-20s%-10d",name, 5);
     }
+
+    public abstract void walk();
 }
 

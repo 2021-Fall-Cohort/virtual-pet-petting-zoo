@@ -55,17 +55,17 @@ public class VirtualPetShelter {
     public void waterAll() {
         for (VirtualPet currentPet : shelterPets) {
             if(currentPet instanceof OrganicPet){
-                ((OrganicPet)currentPet).fluid();
+                currentPet.fluid();
             }
             if(currentPet instanceof RoboticPet){
-                ((RoboticPet)currentPet).fluid();
+                currentPet.fluid();
             }
         }
     }
 
     public void playAll() {
         for (VirtualPet currentPet : shelterPets) {
-//           currentPet.play();
+           currentPet.playPet();
         }
     }
 
