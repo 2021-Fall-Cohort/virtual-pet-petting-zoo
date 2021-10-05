@@ -32,4 +32,7 @@ public abstract class VirtualPet {
     public abstract void playPet();
 
     public abstract void tick();
+
+    public abstract int thirstlevel();
 }
+
