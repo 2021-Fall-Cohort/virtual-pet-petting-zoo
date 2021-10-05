@@ -19,20 +19,17 @@ public abstract class VirtualPet {
         return description;
     }
 
-    public abstract void feed();
+    public abstract void energize();
 
-    public abstract void water();
-
-    public abstract void play();
-
-    public abstract void surrenderPet();
-
-    public abstract void adoptPet();
+    public abstract void fluid();
 
     public abstract void playPet();
 
     public abstract void tick();
 
     public abstract int thirstlevel();
+    public String getPetByDescription() {
+        return description;
+    }
 }
 
