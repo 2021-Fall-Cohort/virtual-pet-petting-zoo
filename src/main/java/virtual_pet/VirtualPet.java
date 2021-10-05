@@ -27,7 +27,9 @@ public abstract class VirtualPet {
 
     public abstract void tick();
 
+    public abstract int thirstlevel();
     public String getPetByDescription() {
         return description;
     }
 }
+

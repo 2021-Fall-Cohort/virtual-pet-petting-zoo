@@ -18,13 +18,14 @@ public class OrganicPet extends VirtualPet {
 
     }
 
-     public int getThirstLevel() {
-        return thirstLevel;
-     }
 
-     public int getMoodLevel() {
+    public int getThirstLevel() {
+        return thirstLevel;
+    }
+
+    public int getMoodLevel() {
         return moodLevel;
-     }
+    }
 
 
     public int getHungerLevel() {
@@ -64,7 +65,3 @@ public class OrganicPet extends VirtualPet {
                 '}';
     }
 }
-
-
-
-
