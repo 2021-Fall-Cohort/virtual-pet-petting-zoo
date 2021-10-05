@@ -27,9 +27,11 @@ public abstract class VirtualPet {
 
     public abstract void tick();
 
-    public abstract int thirstlevel();
     public String getPetByDescription() {
         return description;
+    }
+    public String getPetString() {
+        return String.format("pet: %-20s%-10d",name, 5);
     }
 }
 

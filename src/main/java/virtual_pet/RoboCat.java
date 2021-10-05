@@ -9,4 +9,5 @@ public class RoboCat extends RoboticPet{
         powerLevel -=10;
         oilLevel -=10;
     }
+
 }

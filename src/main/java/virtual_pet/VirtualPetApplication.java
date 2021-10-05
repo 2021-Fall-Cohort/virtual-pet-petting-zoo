@@ -35,23 +35,31 @@ public class VirtualPetApplication {
                     break;
                 case "2":
                     myShelter.waterAll();
+                    System.out.println("All pets have fluid!");
                     break;
                 case "3":
-                    System.out.println("What pet would you like with?");
-                    myShelter.getPetByName("Clancy").playPet();
+                    System.out.println("What is the name of the pet you would like to play with?");
+                    String petname = tigerScan.nextLine();
+                    VirtualPet myPet = myShelter.getPetByName(petname);
+                    myPet.playPet();
+                    System.out.println(myPet.getName() + "had a great time!");
                     break;
                 case "4":
+                    // Robotic or organic
+                    // Cat or Dog
                     System.out.println("What is the pets name?");
                     String name = tigerScan.nextLine();
                     System.out.println("What is the pets description?");
                     String description = tigerScan.nextLine();
-                    System.out.println("What is the pets breed?");
-                    String breed = tigerScan.nextLine();
-                    OrganicPet myTiger = new OrganicPet(name,description,50,50,50, 50);
-                    myShelter.surrenderPet(myTiger);
+                    System.out.println("Do you want an organic pet or a robotic pet?");
+                    // BRITNEY HAD AN EPIPHANY !!!!!
+                    OrganicPet myDog = new OrganicPet(name,description,50,50,50, 50);
+                    myShelter.surrenderPet(myDog);
                     break;
                 case "5":
-                    myShelter.adoptPet(myShelter.getPetByName("Clancy")); // repeat
+                    System.out.println("What pet do you want to adopt?");
+                    String adoptname = tigerScan.nextLine();
+                    myShelter.adoptPet(myShelter.getPetByName(adoptname)); // repeat
                     break;
                 case "6":
                     myShelter.playAll();

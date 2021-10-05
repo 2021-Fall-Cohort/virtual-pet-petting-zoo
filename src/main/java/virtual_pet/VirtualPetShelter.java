@@ -10,10 +10,10 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         this.shelterPets = new ArrayList<VirtualPet>();
-        shelterPets.add(new OrganicDog("Jonas", "Very Good boy", 50, 50, 50, 50));
-        shelterPets.add(new OrganicCat("Ralphie", "A nice kitten", 50, 50, 50, 50));
-        shelterPets.add(new RoboCat("CyberTony", "Doesn't know how to read", 67, 67, 95));
-        shelterPets.add(new RoboDog("MechaPhillip", "Makes cereal", 50, 50, 50));
+        shelterPets.add(new OrganicDog("Jonas", "Organic", 50, 50, 50, 50));
+        shelterPets.add(new OrganicCat("Ralphie", "Organic", 50, 50, 50, 50));
+        shelterPets.add(new RoboCat("CyberTony", "Robotic", 67, 67, 95));
+        shelterPets.add(new RoboDog("MechaPhillip", "Robotic", 50, 50, 50));
     }
 
     public ArrayList<VirtualPet> getPets() {
@@ -65,7 +65,7 @@ public class VirtualPetShelter {
 
     public void playAll() {
         for (VirtualPet currentPet : shelterPets) {
-//            currentPet.play();
+//           currentPet.play();
         }
     }
 

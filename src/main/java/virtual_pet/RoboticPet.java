@@ -1,6 +1,6 @@
 package virtual_pet;
 
-public class RoboticPet extends VirtualPet {
+public abstract class RoboticPet extends VirtualPet {
 
     public int powerLevel;
     public int oilLevel;
@@ -36,9 +36,11 @@ public class RoboticPet extends VirtualPet {
         powerLevel -=5;
    }
 
+    @Override
     public void playPet() {
         powerLevel -=10;
     }
+
     @Override
     public void tick(){
 
