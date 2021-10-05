@@ -1,21 +1,14 @@
-# Required Tasks
-## VirtualPet class
-- [ ] You will need to create a VirtualPet class.
-- [ ] Create at least three instance variables (aka attributes aka properties aka fields).
-- [ ] Create at least three methods (messages you send to your pet).
-- [ ] Create a tick() method that represents the passage of time.
-## VirtualPetApp class
-- [ ] Create a main method.
-- [ ] implements a game loop.
-- [ ] asks for user input.
-- [ ] writes output to the console.
+Welcome to the Virtual Pet Shelter! Fun zoo game by Ty, Britney, Ali
 
 
-## Stretch Tasks
-- [ ] Give the pet the ability to take care of some of its own needs.
+The zoo app is a virtual pet game that will keep you occupied for a long time. You may engage in a range of enjoyable activities with your pet, like playing with them and feeding them. The player will be given one pet at a time to populate the pet shelter. A pet has a name chosen by the user, as well as 5-6 characteristics.
 
-Pets are not robots - they usually have some sort of self-determination! When tick() is called, you might want to have your pet take a look at its needs and address one, prioritizing whichever need is highest. You could also make your pet uncooperative - when the user tries to feed the pet, for example, you might make the pet refuse to eat if it is bored. Remember how we created an instance of the Random class to create a random number generator? You might want to incorporate that.
+The user is then presented with a list of activities that they can do with their pets individually or in groups: The app utilises the tick method every time a user performs an action. Except for one thing: displaying pet information does not activate the tick method. 
+A list of characteristics can be displayed individually or before each action to show the user the current values.
+Your only goal is to look after all of the virtual pets you have, so good luck!
 
-- [ ] Create a visual representation of your pet.
 
-Rather than using numbers to convey your pet’s status, you could have some sort of visual representation of the pet. I.e., instead of printing hunger: 50, you could use smileys or ASCII art to show hunger when hunger >= 50.
+
+![Web capture_5-10-2021_145531_www bing com](https://user-images.githubusercontent.com/90347681/136093610-968a967b-21e0-4224-a459-96513afee9cf.jpeg)
+
+
