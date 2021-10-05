@@ -4,7 +4,6 @@ public abstract class VirtualPet {
     private String name;
     private String description;
 
-    // constructor
 
     public VirtualPet(String name, String description) {
         this.name = name;
@@ -29,9 +28,6 @@ public abstract class VirtualPet {
 
     public String getPetByDescription() {
         return description;
-    }
-    public String getPetString() {
-        return String.format("pet: %-20s%-10d",name, 5);
     }
 
     public abstract void walk();

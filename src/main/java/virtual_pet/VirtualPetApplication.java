@@ -2,7 +2,6 @@ package virtual_pet;
 import java.util.Scanner;
 public class VirtualPetApplication {
 
-    // interacting and gameplay should go HERE in the main
     Scanner tigerScan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -19,12 +18,12 @@ public class VirtualPetApplication {
             System.out.println(myShelter.getPets());
             shelterStatus(myShelter);
             System.out.println("What would you like to do next?.");
-            System.out.println("1. Feed the pets."); // This applies to all pets, feed all the pets at once.
-            System.out.println("2. Give all the pets a drink of water."); // This applies to all pets, water them all at once
-            System.out.println("3. Play with a pet.");// Play with a specific Tiger, list them with descriptions, then select
-            System.out.println("4. surrender a pet."); // Add a tiger to the shelter.
+            System.out.println("1. Feed the pets.");
+            System.out.println("2. Give all the pets a drink of water.");
+            System.out.println("3. Play with a pet.");
+            System.out.println("4. surrender a pet.");
             System.out.println("5. Adopt a pet.");
-            System.out.println("6. Play with all the pets"); // kick out of loop
+            System.out.println("6. Play with all the pets");
             System.out.println("7. Feed a specific pet");
             System.out.println("8. Water a specific pet");
             System.out.println("9. Walk a pet");
@@ -32,28 +31,31 @@ public class VirtualPetApplication {
             userChoice = tigerScan.nextLine();
 
             switch (userChoice) {
+
                 case "1":
                     myShelter.feedAll();
                     System.out.println("All pets have been fed!");
                     break;
+
                 case "2":
                     myShelter.waterAll();
                     System.out.println("All pets have fluid!");
                     break;
+
                 case "3":
                     System.out.println("What is the name of the pet you would like to play with?");
-                    String petname = tigerScan.nextLine();
-                    VirtualPet myPet = myShelter.getPetByName(petname);
+                    String petName = tigerScan.nextLine();
+                    VirtualPet myPet = myShelter.getPetByName(petName);
                     myPet.playPet();
                     System.out.println(myPet.getName() + "had a great time!");
                     break;
+
                 case "4":
                     System.out.println("What is the pets name?");
                     String name = tigerScan.nextLine();
                     System.out.println("What is the pets description?");
                     String description = tigerScan.nextLine();
                     System.out.println("Do you want an organic pet or a robotic pet?");
-
                     String roboticOrganicResponse = tigerScan.nextLine();
                     if (roboticOrganicResponse.equalsIgnoreCase("robotic")) {
                         System.out.println("Do you want a cat or a dog?");
@@ -83,35 +85,43 @@ public class VirtualPetApplication {
                             myShelter.surrenderPet(myDog);
                         }
                     }
-
                     break;
+
                 case "5":
                     System.out.println("What pet do you want to adopt?");
-                    String adoptname = tigerScan.nextLine();
-                    myShelter.adoptPet(myShelter.getPetByName(adoptname));
+                    String adoptName = tigerScan.nextLine();
+                    myShelter.adoptPet(myShelter.getPetByName(adoptName));
                     break;
+
                 case "6":
                     myShelter.playAll();
                     System.out.println("All the pets had a dang ole good time!");
                     break;
+
                 case "7":
                     System.out.println("What pet would you like to feed");
                     String feedName = tigerScan.nextLine();
                     VirtualPet myPetFeed = myShelter.getPetByName(feedName);
                     myPetFeed.energize();
                     System.out.println(myPetFeed.getName() + " feels energized!");
+                    break;
+
                 case "8":
                     System.out.println("What pet would you like to give fluid?");
                     String fluidName = tigerScan.nextLine();
                     VirtualPet myPetFluid = myShelter.getPetByName(fluidName);
                     myPetFluid.fluid();
                     System.out.println(myPetFluid.getName() + " feels lubricated!");
+                    break;
+
                 case "9":
                     System.out.println("What pet would you like to walk?");
                     String walkName = tigerScan.nextLine();
                     VirtualPet myPetWalk = myShelter.getPetByName(walkName);
                     myPetWalk.walk();
                     System.out.println(myPetWalk.getName() + " went on a walk!");
+                    break;
+
                 default:
                     System.out.println("Please enter a valid response.");
 

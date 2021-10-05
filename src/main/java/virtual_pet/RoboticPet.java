@@ -28,12 +28,12 @@ public abstract class RoboticPet extends VirtualPet {
 
     @Override
     public void fluid() {
-        oilLevel -= 5;
+        oilLevel -=10;
     }
 
    @Override
    public void energize(){
-        powerLevel -=5;
+        powerLevel -=10;
    }
 
     @Override
@@ -43,6 +43,8 @@ public abstract class RoboticPet extends VirtualPet {
 
     @Override
     public void tick(){
-
+        oilLevel +=10;
+        powerLevel +=10;
+        disrepairLevel +=10;
     }
 }

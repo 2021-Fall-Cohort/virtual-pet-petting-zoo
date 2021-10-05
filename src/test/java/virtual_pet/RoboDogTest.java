@@ -6,8 +6,8 @@ public class RoboDogTest {
 
     @Test
     public void roboDogHasAName() {
-        RoboDog robojonas = new RoboDog("robojonas", "robo pit bull", 50,50,50);
-        String roboName = robojonas.getName();
+        RoboDog robotJonas = new RoboDog("robojonas", "robo pit bull", 50,50,50);
+        String roboName = robotJonas.getName();
         assertEquals("robojonas", roboName);
     }
 
@@ -15,7 +15,23 @@ public class RoboDogTest {
     public void roboDogShouldBeWalkable() {
         RoboDog robojonas = new RoboDog("robojonas", "robo pit bull", 50,50,50);
         robojonas.walk();
-        int robojonasPower = robojonas.getPowerLevel();
-        assertEquals(40, robojonasPower);
+        int roboJonasPower = robojonas.getPowerLevel();
+        assertEquals(40, roboJonasPower);
+    }
+
+    @Test
+    public void getRoboDogOilLevel() {
+        RoboDog roboJonas = new RoboDog("robojonas", "robo pit bull", 50,50,50);
+        roboJonas.getOilLevel();
+        int roboJonasOilLevel = roboJonas.getOilLevel();
+        assertEquals(50, roboJonasOilLevel);
+    }
+
+    @Test
+    public void getRoboDogDisrepairLevel() {
+        RoboDog roboJonas = new RoboDog("robojonas", "robo pit bull", 50,50,50);
+        roboJonas.getDisrepairLevel();
+        int roboJonasDisrepairLevel = roboJonas.getDisrepairLevel();
+        assertEquals(50, roboJonasDisrepairLevel);
     }
 }

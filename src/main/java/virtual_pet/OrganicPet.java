@@ -57,7 +57,7 @@ public abstract class OrganicPet extends VirtualPet {
 
     @Override
     public String toString() {
-        return "Tiger{" +
+        return "Pet{" +
                  '\'' +
                 ", moodLevel=" + moodLevel +
                 ", thirstLevel=" + thirstLevel +

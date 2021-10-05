@@ -1,9 +1,6 @@
 package virtual_pet;
 import java.util.ArrayList;
 
-// holding the collections of Tigreesssssss
-// feed all water all should be here so the method calls on all of them
-
 public class VirtualPetShelter {
 
     ArrayList<VirtualPet> shelterPets;
