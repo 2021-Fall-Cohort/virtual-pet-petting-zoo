@@ -10,10 +10,10 @@ public class VirtualPetShelter {
 
     public VirtualPetShelter() {
         this.shelterPets = new ArrayList<VirtualPet>();
-        shelterPets.add(new OrganicPet("Clancy", "Kind of lame but he is still cool", 23, 23, 23));
-        shelterPets.add(new OrganicPet("Phillip", "Phillip fucking rules.", 75, 75, 85));
-        shelterPets.add(new OrganicPet("Jeb", "Doesn't know how to read", 67, 67, 95));
-        shelterPets.add(new OrganicPet("Tony", "Makes cereal", 100, 100, 98));
+        shelterPets.add(new OrganicDog("Jonas", "Very Good boy", 50, 50, 50, 50));
+        shelterPets.add(new OrganicCat("Ralphie", "A nice kitten", 50, 50, 50, 50));
+        shelterPets.add(new RoboCat("CyberTony", "Doesn't know how to read", 67, 67, 95));
+        shelterPets.add(new RoboDog("MechaPhillip", "Makes cereal", 50, 50, 50));
     }
 
     public ArrayList<VirtualPet> getPets() {

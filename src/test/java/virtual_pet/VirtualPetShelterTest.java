@@ -15,7 +15,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void getPetByName() {
-        OrganicPet underTest = new OrganicPet("cool", "cool", 25,25,25);
+        OrganicPet underTest = new OrganicPet("cool", "cool", 25,25,25, 50);
        String name = underTest.getName();
        assertEquals("cool", name);
 
@@ -23,14 +23,14 @@ public class VirtualPetShelterTest {
 
     @Test
         void shouldBeAbleToACreatePetAndAddToShelter() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25,25);
         underTest.shelterPets.add(cool);
         assertEquals("cool",underTest.shelterPets.get(4).getName());
         }
 
     @Test
         void shouldBeAbleToRemovePetFromShelter() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25,25);
         underTest.shelterPets.add(cool);
         underTest.shelterPets.remove(cool);
         int sizeOfShelter = underTest.getPets().size();
@@ -40,7 +40,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void shouldFeedAllThePets() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25, 25);
         underTest.shelterPets.add(cool);
         underTest.feedAll();
         assertEquals(20, cool.getHungerLevel());
@@ -48,7 +48,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void shouldWaterAllThePets() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25,25);
         underTest.shelterPets.add(cool);
         underTest.waterAll();
         assertEquals(20, cool.getThirstLevel());
@@ -56,7 +56,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void shouldTickMethodOnAllThePets() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25,25);
         underTest.shelterPets.add(cool);
         underTest.tick();
         assertEquals(35, cool.getHungerLevel());
@@ -65,7 +65,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void shouldBeAbleToPlayWithAllPets() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25, 25,25,25);
         underTest.shelterPets.add(cool);
         underTest.playAll();
         assertEquals(20,cool.getMoodLevel());
@@ -73,7 +73,7 @@ public class VirtualPetShelterTest {
 
     @Test
     void shouldBeAbleToGetTigerByDescription() {
-        OrganicPet cool = new OrganicPet("cool", "cool", 25,25,25);
+        OrganicPet cool = new OrganicPet("cool", "cool", 25,25,25, 25);
         underTest.shelterPets.add(cool);
         underTest.getPetByDescription("cool");
         assertEquals("cool", cool.getPetByDescription());

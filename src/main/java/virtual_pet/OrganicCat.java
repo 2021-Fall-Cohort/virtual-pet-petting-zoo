@@ -1,7 +1,13 @@
 package virtual_pet;
 
 public class OrganicCat extends OrganicPet{
-    public OrganicCat(String name, String description, int hungerLevel, int thirstLevel, int moodLevel) {
-        super(name, description, hungerLevel, thirstLevel, moodLevel);
+    public OrganicCat(String name, String description, int hungerLevel, int thirstLevel, int moodLevel, int soilLevel) {
+        super(name, description, hungerLevel, thirstLevel, moodLevel, soilLevel);
+    }
+
+    public void walk() {
+        hungerLevel +=10;
+        moodLevel +=10;
+        soilLevel -=10;
     }
 }

@@ -37,7 +37,7 @@ public class VirtualPetApplication {
                     myShelter.waterAll();
                     break;
                 case "3":
-                    System.out.println("What tiger would you like with?");
+                    System.out.println("What pet would you like with?");
                     myShelter.getPetByName("Clancy").playPet();
                     break;
                 case "4":
@@ -47,7 +47,7 @@ public class VirtualPetApplication {
                     String description = tigerScan.nextLine();
                     System.out.println("What is the pets breed?");
                     String breed = tigerScan.nextLine();
-                    OrganicPet myTiger = new OrganicPet(name,description,50,50,50);
+                    OrganicPet myTiger = new OrganicPet(name,description,50,50,50, 50);
                     myShelter.surrenderPet(myTiger);
                     break;
                 case "5":

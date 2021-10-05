@@ -8,6 +8,6 @@ public class RoboDog extends RoboticPet{
 
     public void walk() {
       powerLevel -=10;
-      oilLevel =10;
+      oilLevel -=10;
     }
 }

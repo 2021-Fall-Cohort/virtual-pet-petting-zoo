@@ -7,12 +7,14 @@ public class OrganicPet extends VirtualPet {
     public int moodLevel;
     public int thirstLevel;
     public int hungerLevel;
+    public int soilLevel;
 
-    public OrganicPet(String name, String description, int hungerLevel, int thirstLevel, int moodLevel) {
+    public OrganicPet(String name, String description, int hungerLevel, int thirstLevel, int moodLevel, int soilLevel) {
         super(name, description);
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.moodLevel = moodLevel;
+        this.soilLevel = soilLevel;
 
     }
 
